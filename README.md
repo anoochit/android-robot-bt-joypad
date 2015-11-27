@@ -1,4 +1,4 @@
-#Android Bluetooth Joystick
+#Android Bluetooth Joypad
 
 ##Feature
 
