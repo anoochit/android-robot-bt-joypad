@@ -163,11 +163,18 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Setup button first!");
             builder.setCancelable(false);
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("Setting", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                    // User clicked OK button
+                    // button setting
                     Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
                     startActivityForResult(i, RESULT_SETTING);
+                }
+            });
+            builder.setPositiveButton("QRCode", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // scan qrcode
+                    qrcodeScanner();
                 }
             });
             builder.show();
@@ -200,6 +207,9 @@ public class MainActivity extends AppCompatActivity {
                     // set sharepreference
                     prefs = PreferenceManager.getDefaultSharedPreferences(this);
                     SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("pref_debug_switch",false);
+                    editor.putBoolean("pref_vibrate_switch",true);
+                    editor.putString("pref_delay_list","50");
                     editor.putString("pref_pos_up",reader.getString("up"));
                     editor.putString("pref_pos_down",reader.getString("dw"));
                     editor.putString("pref_pos_left",reader.getString("lf"));
@@ -210,7 +220,6 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString("pref_pos_d",reader.getString("d"));
                     editor.commit();
                     Snackbar.make(coordinatorLayout, "Config button complete, let's Play!", Snackbar.LENGTH_SHORT).show();
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Snackbar.make(coordinatorLayout, "Wrong QRCode!!", Snackbar.LENGTH_SHORT).show();
