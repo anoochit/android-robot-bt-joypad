@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <item
+        android:id="@+id/mnuBluetooth"
+        android:orderInCategory="80"
+        android:showAsAction="always"
+        android:title="Connect"
+        android:icon="@drawable/ic_input_black_18dp"
+        tools:ignore="AppCompatResource"/>
+
+    <item
+        android:id="@+id/mnuScan"
+        android:orderInCategory="80"
+        android:showAsAction="always"
+        android:title="QRCode Scanner"
+        android:icon="@drawable/ic_photo_camera_black_24dp"
+        tools:ignore="AppCompatResource"/>
+
+
+    <item
+        android:id="@+id/mnuFullscreen"
+        android:orderInCategory="90"
+        android:showAsAction="always"
+        android:title="Fullscreen"
+        android:icon="@drawable/ic_settings_overscan_black_24dp"
+        tools:ignore="AppCompatResource"/>
+
+
+    <item
+        android:id="@+id/mnuSettings"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        tools:ignore="AppCompatResource"/>
+
+</menu>

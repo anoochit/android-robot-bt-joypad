@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Android Robot BT Joypad</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_delay">Delay before send data</string>
+    <string-array name="pref_tite_delay">
+        <item>50 milliseconds</item>
+        <item>100 milliseconds</item>
+        <item>200 milliseconds</item>
+        <item>500 milliseconds</item>
+        <item>1000 milliseconds</item>
+    </string-array>
+    <string-array name="pref_delay_list_values">
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+
+
+
+    <string name="pref_header_buttonconfig">Config Buttons</string>
+    <string name="pref_default_pos_up">0</string>
+    <string name="pref_title_pos_up">Up button</string>
+    <string name="pref_default_pos_down">1</string>
+    <string name="pref_title_pos_down">Down button</string>
+    <string name="pref_default_pos_left">2</string>
+    <string name="pref_title_pos_left">Left button</string>
+    <string name="pref_default_pos_right">3</string>
+    <string name="pref_title_pos_right">Right button</string>
+    <string name="pref_default_pos_a">a</string>
+    <string name="pref_title_pos_a">A button</string>
+    <string name="pref_default_pos_b">b</string>
+    <string name="pref_title_pos_b">B button</string>
+    <string name="pref_default_pos_c">c</string>
+    <string name="pref_title_pos_c">C button</string>
+    <string name="pref_default_pos_d">d</string>
+    <string name="pref_title_pos_d">D button</string>
+    <string name="pref_description_debug">Show debug value on each buttons</string>
+    <string name="pref_title_debug">Show debug</string>
+    <string name="pref_description_vibrate">Vibrate when push button</string>
+    <string name="pref_title_vibrate">Vibrate when push button</string>
+</resources>

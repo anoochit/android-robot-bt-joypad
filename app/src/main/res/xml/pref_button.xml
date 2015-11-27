@@ -1,0 +1,84 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_up"
+       android:inputType="textCapWords"
+       android:key="pref_pos_up"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_up" />
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_down"
+       android:inputType="textCapWords"
+       android:key="pref_pos_down"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_down" />
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_left"
+       android:inputType="textCapWords"
+       android:key="pref_pos_left"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_left" />
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_right"
+       android:inputType="textCapWords"
+       android:key="pref_pos_right"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_right" />
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_a"
+       android:inputType="textCapWords"
+       android:key="pref_pos_a"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_a" />
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_b"
+       android:inputType="textCapWords"
+       android:key="pref_pos_b"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_b" />
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_c"
+       android:inputType="textCapWords"
+       android:key="pref_pos_c"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_c" />
+
+   <EditTextPreference
+       android:capitalize="words"
+       android:defaultValue="@string/pref_default_pos_d"
+       android:inputType="textCapWords"
+       android:key="pref_pos_d"
+       android:maxLines="1"
+       android:selectAllOnFocus="true"
+       android:singleLine="true"
+       android:title="@string/pref_title_pos_d" />
+
+
+</PreferenceScreen>
