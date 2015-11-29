@@ -3,6 +3,7 @@ package net.redlinesoft.androidrobotbtjoypad;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
+import android.graphics.Color;
 import android.support.design.widget.CoordinatorLayout;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         // set view
         mDecorView = getWindow().getDecorView();
         // hide system ui
@@ -67,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
         // setup bluetooth
         bt = new BluetoothSPP(context);
-        //checkBluetoothState();
+
+        // check connection
+        checkBluetoothState();
 
         bt.setBluetoothConnectionListener(new BluetoothSPP.BluetoothConnectionListener() {
             public void onDeviceConnected(String name, String address) {
