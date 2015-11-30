@@ -169,13 +169,14 @@ public class MainActivity extends AppCompatActivity {
             builder.setTitle("Setup button first!");
             builder.setCancelable(false);
             builder.setPositiveButton("Setting", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
                     // button setting
                     Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
                     startActivityForResult(i, RESULT_SETTING);
                 }
             });
-            builder.setPositiveButton("QRCode", new DialogInterface.OnClickListener() {
+            builder.setNegativeButton("QRCode", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     // scan qrcode
