@@ -30,6 +30,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 import app.akexorcist.bluetotohspp.library.BluetoothSPP;
 import app.akexorcist.bluetotohspp.library.BluetoothState;
@@ -54,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        // set color background
+        getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.colorBackground1));
+
         // set view
         mDecorView = getWindow().getDecorView();
         // hide system ui
@@ -69,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         bt = new BluetoothSPP(context);
 
         // check connection
-        checkBluetoothState();
+        //checkBluetoothState();
 
         bt.setBluetoothConnectionListener(new BluetoothSPP.BluetoothConnectionListener() {
             public void onDeviceConnected(String name, String address) {
@@ -107,18 +112,20 @@ public class MainActivity extends AppCompatActivity {
         if (this.btConnect == true) {
             bt.disconnect();
         }
+
         bt.setupService();
         bt.startService(BluetoothState.DEVICE_OTHER);
 
-        Snackbar.make(coordinatorLayout, "Choose device to connect", Snackbar.LENGTH_LONG)
-                .setAction("Setup", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // load device list
-                        Intent intent = new Intent(getApplicationContext(), DeviceList.class);
-                        startActivityForResult(intent, BluetoothState.REQUEST_CONNECT_DEVICE);
-                    }
-                }).show();
+       Snackbar.make(coordinatorLayout, "Choose device to connect", Snackbar.LENGTH_LONG)
+                    .setAction("Setup", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // load device list
+                            Intent intent = new Intent(getApplicationContext(), DeviceList.class);
+                            startActivityForResult(intent, BluetoothState.REQUEST_CONNECT_DEVICE);
+                        }
+                    }).show();
+
     }
 
     public void setTextResult(String button) {
