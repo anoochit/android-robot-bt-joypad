@@ -14,7 +14,7 @@
 
     <ListPreference
         android:defaultValue="50"
-        android:entries="@array/pref_tite_delay"
+        android:entries="@array/pref_title_delay"
         android:entryValues="@array/pref_delay_list_values"
         android:key="pref_delay_list"
         android:negativeButtonText="@null"

@@ -7,14 +7,20 @@
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
     <string name="pref_title_delay">Delay before send data</string>
-    <string-array name="pref_tite_delay">
-        <item>50 milliseconds</item>
-        <item>100 milliseconds</item>
-        <item>200 milliseconds</item>
-        <item>500 milliseconds</item>
-        <item>1000 milliseconds</item>
+    <string-array name="pref_title_delay">
+        <item>None</item>
+        <item>10 ms</item>
+        <item>20 ms</item>
+        <item>50 ms</item>
+        <item>100 ms</item>
+        <item>200 ms</item>
+        <item>500 ms</item>
+        <item>1000 ms</item>
     </string-array>
     <string-array name="pref_delay_list_values">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
         <item>50</item>
         <item>100</item>
         <item>200</item>

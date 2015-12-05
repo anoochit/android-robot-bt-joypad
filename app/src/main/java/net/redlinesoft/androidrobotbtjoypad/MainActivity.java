@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendBluetoothData(final String data) {
 
-        final int delay = Integer.parseInt(prefs.getString("pref_delay_list", "50"));
+        final int delay = Integer.parseInt(prefs.getString("pref_delay_list", "0"));
 
         final Handler handler = new Handler();
 
@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putBoolean("pref_debug_switch",false);
                     editor.putBoolean("pref_vibrate_switch",true);
-                    editor.putString("pref_delay_list","50");
+                    editor.putString("pref_delay_list","0");
                     editor.putString("pref_pos_up",reader.getString("up"));
                     editor.putString("pref_pos_down",reader.getString("dw"));
                     editor.putString("pref_pos_left",reader.getString("lf"));
