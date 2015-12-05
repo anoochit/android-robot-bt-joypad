@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendBluetoothData(final String data) {
 
-        final int delay = Integer.parseInt(prefs.getString("pref_delay_list", "100"));
+        final int delay = Integer.parseInt(prefs.getString("pref_delay_list", "50"));
 
         final Handler handler = new Handler();
 
