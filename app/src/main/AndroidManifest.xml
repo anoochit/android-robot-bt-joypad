@@ -4,10 +4,12 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <activity android:name="app.akexorcist.bluetoothspp.DeviceList" android:screenOrientation="landscape" />
-
+    <activity
+        android:name="app.akexorcist.bluetoothspp.DeviceList"
+        android:screenOrientation="landscape" />
 
     <application
         android:allowBackup="true"
@@ -27,8 +29,8 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:screenOrientation="landscape"
-            ></activity>
+            android:screenOrientation="landscape" />
+        <activity android:name=".ScannerActivity"></activity>
     </application>
 
 </manifest>

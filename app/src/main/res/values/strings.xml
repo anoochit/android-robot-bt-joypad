@@ -29,7 +29,6 @@
     </string-array>
 
 
-
     <string name="pref_header_buttonconfig">Config Buttons</string>
     <string name="pref_default_pos_up">0</string>
     <string name="pref_title_pos_up">Up button</string>
