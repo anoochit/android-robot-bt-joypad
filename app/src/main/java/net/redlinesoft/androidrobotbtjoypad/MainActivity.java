@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         // set color background
         getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.colorBackground1));
 
