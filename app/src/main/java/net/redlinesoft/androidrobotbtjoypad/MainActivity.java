@@ -213,6 +213,8 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject reader = new JSONObject(contents);
                     // set sharepreference
+                    // sample json string
+                    // {"up": "w 1 1","dw": "w 2 1","lf": "w 4 1","rt": "w 3 1","a": "w 0 1","b": "w 0 0","c": "w 5 3","d": "w 6 3"}
                     prefs = PreferenceManager.getDefaultSharedPreferences(this);
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putBoolean("pref_debug_switch",false);
