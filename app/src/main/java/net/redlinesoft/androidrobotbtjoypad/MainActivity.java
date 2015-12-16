@@ -229,10 +229,10 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString("pref_pos_c",reader.getString("c"));
                     editor.putString("pref_pos_d",reader.getString("d"));
                     editor.commit();
-                    Snackbar.make(coordinatorLayout, "Config button complete, let's Play!", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(coordinatorLayout, "Config button complete, let's Play!", Snackbar.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Snackbar.make(coordinatorLayout, "Wrong QRCode!!", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(coordinatorLayout, "Wrong QRCode!!", Snackbar.LENGTH_LONG).show();
                 }
 
             }

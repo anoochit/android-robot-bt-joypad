@@ -7,9 +7,6 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <activity
-        android:name="app.akexorcist.bluetoothspp.DeviceList"
-        android:screenOrientation="landscape" />
 
     <application
         android:allowBackup="true"
@@ -36,6 +33,7 @@
         <activity
             android:name=".ScannerActivity"
             android:screenOrientation="landscape"></activity>
+
     </application>
 
 </manifest>
