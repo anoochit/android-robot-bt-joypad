@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.19"
-     inkscape:cx="390.9916"
-     inkscape:cy="228.95718"
+     inkscape:cx="376.28571"
+     inkscape:cy="250"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -75,7 +75,7 @@
          id="tspan4140"
          x="99.352882"
          y="746.40765"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yuanti TC';-inkscape-font-specification:'Yuanti TC'">Arduino Bluetooth Joypad</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yuanti TC';-inkscape-font-specification:'Yuanti TC'">Arduino Robot Bluetooth Joypad</tspan><tspan
          sodipodi:role="line"
          x="99.352882"
          y="818.69775"
@@ -83,7 +83,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yuanti TC';-inkscape-font-specification:'Yuanti TC'">8 buttons, configurable buttons,</tspan><tspan
          sodipodi:role="line"
          x="99.352882"
-         y="890.98785"
+         y="890.98792"
          id="tspan4154"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yuanti TC';-inkscape-font-specification:'Yuanti TC'">quick setting via QRCode!!</tspan><tspan
          sodipodi:role="line"
@@ -92,7 +92,7 @@
          id="tspan4144"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Yuanti TC';-inkscape-font-specification:'Yuanti TC'" /></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:5.36689997;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4181"
        width="917.28015"
        height="297.95242"
