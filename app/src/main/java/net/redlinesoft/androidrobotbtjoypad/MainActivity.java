@@ -16,6 +16,7 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -100,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
 
     private void checkBluetoothState() {
@@ -109,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
             bt.disconnect();
         }
 
-        bt.setupService();
-        bt.startService(BluetoothState.DEVICE_OTHER);
-
-       Snackbar.make(coordinatorLayout, "Choose device to connect", Snackbar.LENGTH_LONG)
+        if (bt.isBluetoothEnabled()) {
+            bt.setupService();
+            bt.startService(BluetoothState.DEVICE_OTHER);
+            Snackbar.make(coordinatorLayout, "Choose device to connect", Snackbar.LENGTH_LONG)
                     .setAction("Setup", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -121,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
                             startActivityForResult(intent, BluetoothState.REQUEST_CONNECT_DEVICE);
                         }
                     }).show();
+        } else {
+            checkBluetoothEnable();
+        }
 
     }
 
@@ -195,8 +198,8 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == BluetoothState.REQUEST_CONNECT_DEVICE) {
             if (resultCode == Activity.RESULT_OK)
                 bt.connect(data);
-                // setup josypad view
-                setupJoyPadView();
+            // setup josypad view
+            setupJoyPadView();
         } else if (requestCode == BluetoothState.REQUEST_ENABLE_BT) {
             if (resultCode == Activity.RESULT_OK) {
                 bt.setupService();
@@ -217,17 +220,17 @@ public class MainActivity extends AppCompatActivity {
                     // {"up": "w 1 1","dw": "w 2 1","lf": "w 4 1","rt": "w 3 1","a": "w 0 1","b": "w 0 0","c": "w 5 3","d": "w 6 3"}
                     prefs = PreferenceManager.getDefaultSharedPreferences(this);
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putBoolean("pref_debug_switch",false);
-                    editor.putBoolean("pref_vibrate_switch",true);
-                    editor.putString("pref_delay_list","0");
-                    editor.putString("pref_pos_up",reader.getString("up"));
-                    editor.putString("pref_pos_down",reader.getString("dw"));
-                    editor.putString("pref_pos_left",reader.getString("lf"));
-                    editor.putString("pref_pos_right",reader.getString("rt"));
-                    editor.putString("pref_pos_a",reader.getString("a"));
-                    editor.putString("pref_pos_b",reader.getString("b"));
-                    editor.putString("pref_pos_c",reader.getString("c"));
-                    editor.putString("pref_pos_d",reader.getString("d"));
+                    editor.putBoolean("pref_debug_switch", false);
+                    editor.putBoolean("pref_vibrate_switch", true);
+                    editor.putString("pref_delay_list", "0");
+                    editor.putString("pref_pos_up", reader.getString("up"));
+                    editor.putString("pref_pos_down", reader.getString("dw"));
+                    editor.putString("pref_pos_left", reader.getString("lf"));
+                    editor.putString("pref_pos_right", reader.getString("rt"));
+                    editor.putString("pref_pos_a", reader.getString("a"));
+                    editor.putString("pref_pos_b", reader.getString("b"));
+                    editor.putString("pref_pos_c", reader.getString("c"));
+                    editor.putString("pref_pos_d", reader.getString("d"));
                     editor.commit();
                     Snackbar.make(coordinatorLayout, "Config button complete, let's Play!", Snackbar.LENGTH_LONG).show();
                 } catch (JSONException e) {
@@ -426,9 +429,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if(!bt.isBluetoothEnabled()) {
+        checkBluetoothEnable();
+    }
+
+    private void checkBluetoothEnable() {
+        if (!bt.isBluetoothEnabled()) {
             // Do something if bluetooth is disable
-            Snackbar.make(coordinatorLayout, "Bluetooth Disable", Snackbar.LENGTH_LONG)
+            Snackbar.make(coordinatorLayout, "Bluetooth is disable", Snackbar.LENGTH_LONG)
                     .setAction("Turn On", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -437,7 +444,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }).show();
         }
-
     }
 
     @Override
@@ -477,7 +483,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
         Intent i = new Intent(MainActivity.this, ScannerActivity.class);
-        startActivityForResult(i,QR_CODE);
+        startActivityForResult(i, QR_CODE);
     }
 
     @Override
